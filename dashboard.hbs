@@ -1,0 +1,265 @@
+
+
+<!-- userList.handlebars -->
+
+
+
+{{!-- <h1>Student List</h1>
+
+<form action="/auth/assignSubject" method="POST">
+  <ul>
+    {{#each users}}
+    <li>
+      <p>Name: {{name}}</p>
+      <p>Email: {{email}}</p>
+      <div class="subject-options">
+        <p>Subject Options:</p>
+        <ul>
+          <li>
+            <p>Math:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="math" name="subjects[]" value="Addition">
+                <label for="math">Addition</label>
+              </li>
+              <li>
+                <input type="checkbox" id="subtraction" name="subjects[]" value="Subtraction">
+                <label for="subtraction">Subtraction</label>
+              </li>
+              <li>
+                <input type="checkbox" id="time" name="subjects[]" value="Time">
+                <label for="time">Time</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Reading:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="vocabulary" name="subjects[]" value="Vocabulary">
+                <label for="vocabulary">Vocabulary</label>
+              </li>
+              <li>
+                <input type="checkbox" id="writing" name="subjects[]" value="Writing">
+                <label for="writing">Writing</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Social/Emotional Learning:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="gratitude" name="subjects[]" value="Gratitude">
+                <label for="gratitude">Gratitude</label>
+              </li>
+              <li>
+                <input type="checkbox" id="respect" name="subjects[]" value="Respect">
+                <label for="respect">Respect</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+  <button type="submit">Assign</button>
+</form> --}}
+<!-- userList.handlebars -->
+
+{{!-- <h1>Student List</h1>
+
+<ul>
+  {{#each users}}
+    <li>
+      <p>Name: {{name}}</p>
+      <p>Email: {{email}}</p>
+      <div class="subject-options">
+        <p>Subject Options:</p>
+        <form action="/auth/assignSubject" method="POST">
+          <input type="hidden" name="name" value="{{name}}">
+          <ul class="subject-list">
+            <li>
+              <p>Math:</p>
+              <ul>
+                <li>
+                  <input type="checkbox" id="math" name="subjects[]" value="Addition">
+                  <label for="math">Addition</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="subtraction" name="subjects[]" value="Subtraction">
+                  <label for="subtraction">Subtraction</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="time" name="subjects[]" value="Time">
+                  <label for="time">Time</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>Reading:</p>
+              <ul>
+                <li>
+                  <input type="checkbox" id="vocabulary" name="subjects[]" value="Vocabulary">
+                  <label for="vocabulary">Vocabulary</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="writing" name="subjects[]" value="Writing">
+                  <label for="writing">Writing</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>Social/Emotional Learning:</p>
+              <ul>
+                <li>
+                  <input type="checkbox" id="gratitude" name="subjects[]" value="Gratitude">
+                  <label for="gratitude">Gratitude</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="respect" name="subjects[]" value="Respect">
+                  <label for="respect">Respect</label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button type="submit">Assign</button>
+        </form>
+      </div>
+      <!-- Display other user details as needed -->
+    </li>
+  {{/each}}
+</ul> --}}
+
+
+<!-- userList.handlebars -->
+
+{{!-- <h1>Student List</h1>
+
+<form action="/auth/assignSubject" method="POST">
+  <ul>
+    {{#each users}}
+    <li>
+      <p>Name: {{name}}</p>
+      <p>Email: {{email}}</p>
+      <div class="subject-options">
+        <p>Subject Options:</p>
+        <ul>
+          <li>
+            <input type="hidden" name="name" value="{{name}}">
+            <p>Math:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="math" name="subjects[]" value="Addition">
+                <label for="math">Addition</label>
+              </li>
+              <li>
+                <input type="checkbox" id="subtraction" name="subjects[]" value="Subtraction">
+                <label for="subtraction">Subtraction</label>
+              </li>
+              <li>
+                <input type="checkbox" id="time" name="subjects[]" value="Time">
+                <label for="time">Time</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Reading:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="vocabulary" name="subjects[]" value="Vocabulary">
+                <label for="vocabulary">Vocabulary</label>
+              </li>
+              <li>
+                <input type="checkbox" id="writing" name="subjects[]" value="Writing">
+                <label for="writing">Writing</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Social/Emotional Learning:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="gratitude" name="subjects[]" value="Gratitude">
+                <label for="gratitude">Gratitude</label>
+              </li>
+              <li>
+                <input type="checkbox" id="respect" name="subjects[]" value="Respect">
+                <label for="respect">Respect</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+  <button type="submit">Assign</button>
+</form> --}}
+
+
+
+<!-- userList.handlebars -->
+
+<h1>Student List</h1>
+
+<form action="/auth/assignSubject" method="POST">
+  <ul>
+    {{#each users}}
+    <li>
+      <p>Name: {{name}}</p>
+      <p>Email: {{email}}</p>
+      <div class="subject-options">
+        <p>Subject Options:</p>
+        <ul>
+          <li>
+            <input type="hidden" name="name[]" value="{{name}}">
+            <p>Math:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="{{name}}-math" name="subjects[{{name}}][]" value="Addition">
+                <label for="{{name}}-math">Addition</label>
+              </li>
+              <li>
+                <input type="checkbox" id="{{name}}-subtraction" name="subjects[{{name}}][]" value="Subtraction">
+                <label for="{{name}}-subtraction">Subtraction</label>
+              </li>
+              <li>
+                <input type="checkbox" id="{{name}}-time" name="subjects[{{name}}][]" value="Time">
+                <label for="{{name}}-time">Time</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Reading:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="{{name}}-vocabulary" name="subjects[{{name}}][]" value="Vocabulary">
+                <label for="{{name}}-vocabulary">Vocabulary</label>
+              </li>
+              <li>
+                <input type="checkbox" id="{{name}}-writing" name="subjects[{{name}}][]" value="Writing">
+                <label for="{{name}}-writing">Writing</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Social/Emotional Learning:</p>
+            <ul>
+              <li>
+                <input type="checkbox" id="{{name}}-gratitude" name="subjects[{{name}}][]" value="Gratitude">
+                <label for="{{name}}-gratitude">Gratitude</label>
+              </li>
+              <li>
+                <input type="checkbox" id="{{name}}-respect" name="subjects[{{name}}][]" value="Respect">
+                <label for="{{name}}-respect">Respect</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+  <button type="submit">Assign</button>
+</form>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> header   }}
+  <body>
+    {{> navbar   }}
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <div class="container-fluid">
+      <div class="title">You have been assigned the following courses</div>
+      <div class="title">Choose the topics you would like to study today</div>
+      
+      <form action="/auth/display" method="POST">
+        <div>
+          <h3> Math </h3>    
+          <input type="checkbox" id="time"  name="time">
+          <label for="time"> Time</label><br> 
+        </div>
+        <div>
+          <input type="checkbox" id="addition" name="addition" >
+          <labelr="addition"> Addition</label><br>
+        </div>
+        <div>   
+          <input type="checkbox" id="subtraction" name="subtraction">
+          <label for="subtraction"> Subtraction</label><br>
+        </div>
+
+          <h3> Reading </h3>      
+        <div>   
+          <input type="checkbox" id="vocabulary" name="vocabulary" value="vocabulary">
+          <label for="vocabulary"> Vocabulary</label><br>
+        </div>
+        <div>   
+          <input type="checkbox" id="writing" name="writing" value="writing">
+          <label for="writing"> Writing</label><br>
+        </div>
+
+        <h3> Social/Emotional Learning </h3>      
+        <div>   
+          <input type="checkbox" id="curiosity" name="curiosity" value="curiosity">
+          <label for="curiosity"> Curiosity</label><br>
+        </div>
+        <div class="btn">
+        <button type="submit">Begin Studying</button>
+        </div>
+      </form>
+    </div>
+  
+  
+  </body>
+</html>

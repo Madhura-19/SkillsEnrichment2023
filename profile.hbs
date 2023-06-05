@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{> header }}
+  <body>
+  
+    {{> navbar }}
+
+   <div class="data">
+    <h1> List of courses completed and badges earned</h1>
+   </div>
+    
+   <p id="msg1"></p>
+   <p id="msg2"></p>
+    <div id="header1"></div>
+    <div id="header2"></div>
+  
+    <script type="text/javascript">
+    var number=localStorage.getItem('Data');
+         //document.write(number);
+
+    //if number==2 display goldimage
+    if(number==='2'){
+      
+  document.getElementById("msg1").innerHTML = "You have completed the quiz for addition successfully";
+  document.getElementById("msg1").style.textAlign = "center";
+  document.getElementById("msg1").style.margin = "0px auto";   
+  
+      var img = document.createElement("img");
+      img.src = "/images/gold.jpeg";
+      var src = document.getElementById("header1");
+      src.appendChild(img);}
+  
+      
+    var number2=localStorage.getItem('Data2');
+          //document.write(number2);
+
+    if(number2==='1'){
+       document.getElementById("msg2").innerHTML = "You have completed the quiz for time successfully";
+       document.getElementById("msg2").style.textAlign = "center";
+       document.getElementById("msg2").style.margin = "2px auto";   
+     var img = document.createElement("img");
+      img.src = "";
+      var src = document.getElementById("header2");
+      src.appendChild(img);
+    }
+ 
+</script>
+  </body>
+</html>

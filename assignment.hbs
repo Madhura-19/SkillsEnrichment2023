@@ -1,0 +1,21 @@
+{{!-- Your .hbs file --}}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assigned Subjects</title>
+</head>
+<body>
+  <h1>Student ID: {{ studentId }}</h1>
+  <h1>Assigned Subjects</h1>
+  {{#if assignedSubjects}}
+    <ul>
+      {{#each assignedSubjects}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>No subjects assigned.</p>
+  {{/if}}
+</body>
+</html>
+

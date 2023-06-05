@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+   {{> header   }}
+  <body>
+   
+ {{> navbar   }}
+ 
+
+  <div> Choose the right answers to score a point for the below questions</div>
+    <div class="container-fluid">
+  
+        {{#if addition}}
+       
+       <p> 1) What is the value of 10+12= ? </p>
+       <label><input type="radio" name = "q1" value="a"> 22 </label>
+       <label><input type="radio" name = "q1" value="b"> 23 </label> 
+       <label><input type="radio" name = "q1" value="c"> 21 </label> <br>
+        <div id="result1"></div>
+       <p> 2) What is the value of 9+7= ? </p>
+       <label><input type="radio"name = "q2" value="a"> 18 </label> 
+       <label><input type="radio" name = "q2" value="b"> 16 </label> 
+       <label><input type="radio" name = "q2" value="c"> 17 </label> <br>
+       <div id="result2"></div>
+       <br> <button onclick="checkAnswers1()">Submit</button>
+        <p id="total1"></p>
+        <p id="msg1"></p>
+       
+          {{/if}}
+       {{#if time}}
+      
+
+        <p> 1) If it is 2pm now what will the time be 1 hour from now? </p>
+       <label><input type="radio" name = "q3" value="a"> 1pm</label>
+       <label><input type="radio" name = "q3" value="b"> 2pm</label>
+       <label><input type="radio" name = "q3" value="c"> 3pm </label><br> 
+       <div id="result3"></div>
+        <br> <button onclick="checkAnswers2()">Submit</button>
+         <p id="total2"></p>
+          <p id="msg2"></p>
+        {{/if}}
+       
+       
+        <br>
+       
+    </div>
+
+    <script>
+        
+        var score=0; var score2=0;
+		function checkAnswers1() {
+			var score = 0;
+          
+			var q1Answer = document.querySelector('input[name="q1"]:checked').value;
+			if (q1Answer === null) {
+				document.getElementById("result1").innerHTML = "Please select an answer";
+			} else if (q1Answer=== "a") {
+				score++;
+				document.getElementById("result1").classList.add('good');
+                document.getElementById("result1").innerHTML = "Correct!";
+			} else {
+				document.getElementById("result1").classList.add('error');
+                document.getElementById("result1").innerHTML = "Sorry, try again";
+			}
+            var q2Answer = document.querySelector('input[name="q2"]:checked').value;
+            if (q2Answer === null) {
+				document.getElementById("result2").innerHTML = "Please select an answer";
+			} else if (q2Answer=== "b") {
+				score++;
+                document.getElementById("result2").classList.add('good');
+				document.getElementById("result2").innerHTML = "Correct!";
+			} else {
+                document.getElementById("result2").classList.add('error');
+				document.getElementById("result2").innerHTML = "Sorry, retry";
+			}
+             document.getElementById("total1").innerHTML = "Your score is: " + score;
+            
+             console.log(score);
+             if(score===2){document.getElementById("msg1").innerHTML = "You have won a golden badge for completion";}
+             else{document.getElementById("msg1").innerHTML = "sorry try sagain to win a badge";}
+             localStorage.setItem('Data',score);
+        }
+        
+  
+
+            function checkAnswers2() {
+                var score2=0
+            var q3Answer = document.querySelector('input[name="q3"]:checked').value;
+           
+            if (q3Answer === null) {
+				document.getElementById("result3").innerHTML = "Please select an answer";
+			} else if (q3Answer=== "c") {
+				score2++;
+                document.getElementById("result3").classList.add('good');
+				document.getElementById("result3").innerHTML = "Correct!";
+			} else {
+                document.getElementById("result3").classList.add('error');
+				document.getElementById("result3").innerHTML = "Sorry, retry";
+			}
+            document.getElementById("total2").innerHTML = "Your score is: " + score2;
+            if(score2===1){document.getElementById("msg2").innerHTML = "You have won a golden badge for completion";}
+            else{document.getElementById("msg2").innerHTML = "sorry try sagain to win a badge";}
+            localStorage.setItem('Data2',score2);
+        }	
+	</script>
+
+  </body>
+</html>

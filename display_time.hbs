@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   {{> header   }}
+  <body>
+     {{> navbar   }}
+        <div class="container-fluid">
+      
+       <!--<p> {{ time }} uncomment to view parameters selected</p>-->
+        {{#if time}}
+        <div class="title"> TIME CHAPTER RESOURCES</div>
+        <div> 
+            <a href="https://ny.pbslearningmedia.org/resource/ll38-tick-tock-video/lets-learn/"> click here for PBS KIDS video lessons </a> <br>
+            <a href="https://pbskids.org/curiousgeorge/printables/clock.html">click here for PBS KIDS hands on activity lessons</a> <br>
+            <a href="https://www.pbs.org/parents/crafts-and-experiments/learning-to-tell-time-with-a-paper-plate-clock">click here for PBS KIDS for parents</a><br> 
+        </div>
+        {{/if}}
+
+        {{#if addition}}
+        <div class="text"> ADDITION CHAPTER RESOURCES</div>
+        <div class="links">
+        <a href="https://www.oddsquadtv.com/oddsquad/games/catchthecentigurps/"> click here for PBS KIDS games</a> <br>
+        <a href="https://pbskids.org/peg/games/hide-and-seek/"> click here for PBS KIDS games</a> <br>
+        <a href="https://ny.pbslearningmedia.org/resource/kids-lab-video-odd-squad-bad-news-bears/bad-luck-bears-odd-squad-pbs-kids-lab/">click here for PBS KIDS VIDEO lessons</a> <br>
+        <a href="https://ny.pbslearningmedia.org/resource/ll67-write-equations-to-show-addition-video/lets-learn/">click here for PBS KIDS VIDEO</a><br> 
+        <a href="https://ny.pbslearningmedia.org/resource/lets-use-the-plus-sign-video/lets-learn/">click here for PBS KIDS VIDEO</a><br> 
+        <a href="https://static.pbslearningmedia.org/media/media_files/8890fa15-d619-438c-8677-a6af2c9ecfed/cda32f64-6113-45ee-9370-49c1a3ac7482.pdf">click here for PBS KIDS hands on activity lessons</a> <br>
+        <a href="https://static.pbslearningmedia.org/media/media_files/9ee08860-b9e9-4297-9a66-e93cb69967ca/028b8a45-1086-48a4-afc2-dbe927833a01.pdf">click here for PBS KIDS hands on activity lessons</a> <br>
+        <a href="https://cms-tc.pbskids.org/parents/Perfect-10-PDF.pdf?mtime=20191105135722">click here for PBS KIDS hands on activity lessons</a> <br>
+        <a href="https://www.pbs.org/parents/crafts-and-experiments/addition-agility-with-olive-and-otto">click here for PBS KIDS for parents</a><br> 
+        </div>
+        {{/if}}
+        <div class="title"> Select the topics you are ready to take quiz for!</div>
+        <form action="/auth/quiz" method="POST">
+         {{#if time}}
+        <div>
+          <input type="checkbox" id="time"  name="time">
+          <label for="time"> Time</label><br> 
+        </div>
+        {{/if}}
+         {{#if addition}}
+        <div>
+          <input type="checkbox" id="addition" name="addition" >
+          <label for="addition"> Addition</label><br>    
+        </div>{{/if}}
+
+        <div class="btn">
+        <button type="submit">Begin your quiz!</button>
+        </div>
+        </form>
+        </div>
+    </body>
+</html>
