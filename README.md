@@ -14,19 +14,19 @@ LOGIN SYSTEM
     -css
    -node_modules(pre installed)
   - VIEWS
-    -PARTIALS
-    -header.hbs
-    -navbar.hbs
-   -assignment.hbs
-   auth.hbs
-   dashboard.hbs
-   display_time.hbs
-   display.hbs
-   home.hbs
-   login.hbs
-   profile.hbs
-   quiz.hbs
-   register.hbs
+    - PARTIALS
+     - header.hbs
+     - navbar.hbs
+     -assignment.hbs
+  - auth.hbs
+  - dashboard.hbs
+  - display_time.hbs
+  - display.hbs
+ -  home.hbs
+ -  login.hbs
+  - profile.hbs
+  - quiz.hbs
+  - register.hbs
    
    
   Mysql has the following structure
@@ -37,9 +37,11 @@ LOGIN SYSTEM
     -password
     -is_teacher
     -teacher_id
+    
    -subjects
     -subjectid
     -subjectname
+    
    -subjectassigned
     -assignedid
     -studentid
